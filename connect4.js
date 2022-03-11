@@ -6,20 +6,14 @@
  */
 
 
-
-let buttonArea = document.createElement("div");
+let game = document.querySelector("#game");
 let newGameButton = document.createElement("button");
-
-buttonArea.classList.add("buttonArea");
 
 newGameButton.classList.add("button");
 newGameButton.innerText = "New Game";
-buttonArea.append(newGameButton);
 newGameButton.addEventListener("click", initNewGame);
 
-let body = document.querySelector("body");
-body.append(buttonArea);
-
+game.append(newGameButton);
 let table = document.getElementById("board");
 
 function initNewGame(){

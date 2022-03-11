@@ -5,6 +5,34 @@
  * board fills (tie)
  */
 
+
+
+let buttonArea = document.createElement("div");
+let newGameButton = document.createElement("button");
+
+buttonArea.classList.add("buttonArea");
+
+newGameButton.classList.add("button");
+newGameButton.innerText = "New Game";
+buttonArea.append(newGameButton);
+newGameButton.addEventListener("click", initNewGame);
+
+let body = document.querySelector("body");
+body.append(buttonArea);
+
+let table = document.getElementById("board");
+
+function initNewGame(){
+
+  while(table.firstChild){
+    table.removeChild(table.firstChild);
+  }
+  new Game(7, 6);
+};
+
+
+
+
 class Game {
   constructor(width, height) {
     this.width = width;
@@ -166,4 +194,4 @@ class Game {
   }
 }
 
-new Game(7, 6);
+

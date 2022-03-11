@@ -94,7 +94,7 @@ class Game {
   }
 
   endGame(msg) {
-    alert(msg);
+    setTimeout(() => {alert(msg)},250)
   }
 
   handleClick(evt) {
